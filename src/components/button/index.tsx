@@ -7,7 +7,11 @@ function Button(props) {
     }
 
     return (
-        <TouchableOpacity style={s.button} onPress={TesteClick}>
+        <TouchableOpacity 
+        style={s.button} 
+        onPress={TesteClick} 
+        activeOpacity={0.8}
+        >
             <Text style={s.text}>{props.text}</Text>
         </TouchableOpacity>
     );
