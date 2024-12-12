@@ -1,4 +1,4 @@
-ConsultaFácil - Aplicativo de Marção de Consultas
+Aplicativo de Marção de Consultas
 
 Descrição
 
