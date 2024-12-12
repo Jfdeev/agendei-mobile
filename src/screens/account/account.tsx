@@ -2,22 +2,23 @@ import { Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 import { s } from "./style";
 import Button from "../../components/button";
 
-export default function Login() {
+export default function Account() {
     return (
         <View style={s.container}>
             <View style={s.containerLogo}>
                 <Image source={require("../../assets/logo.png")} style={[s.logo, s.containerLogo]}/>
             </View>
             <View>
+                <TextInput placeholder="Nome" style={s.input}/>
                 <TextInput placeholder="Email" style={s.input}/>
                 <TextInput placeholder="Password" style={s.input} secureTextEntry={true}/>
                 <Button text="Acessar" />
             </View>
 
             <View style={s.footer}>
-                <Text style={s.text}>Não tenho conta. </Text>
-                <TouchableOpacity activeOpacity={0.8}>
-                    <Text style={s.textAccount}>Criar conta agora.</Text>
+                <Text style={s.text}>Já tenho conta. </Text>
+                <TouchableOpacity activeOpacity={0.8} >
+                    <Text style={s.textAccount}>Fazer login agora.</Text>
                 </TouchableOpacity>
             </View>
         </View>
