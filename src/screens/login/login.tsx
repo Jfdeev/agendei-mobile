@@ -1,12 +1,13 @@
 import { Text, View, Image, TextInput, TouchableOpacity } from "react-native";
 import { s } from "./style";
+import icon from "../../constants/icon";
 import Button from "../../components/button";
 
 export default function Login() {
     return (
         <View style={s.container}>
             <View style={s.containerLogo}>
-                <Image source={require("../../assets/logo.png")} style={[s.logo, s.containerLogo]}/>
+                <Image source={icon.logo} style={[s.logo, s.containerLogo]}/>
             </View>
             <View>
                 <TextInput placeholder="Email" style={s.input}/>
