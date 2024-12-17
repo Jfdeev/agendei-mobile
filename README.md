@@ -1,7 +1,7 @@
 # Agendei - Aplicativo de Marcação de Consultas
 
 ## Descrição
-O **ConsultaFácil** é um aplicativo desenvolvido em React Native que permite aos usuários marcar consultas médicas de forma rápida e simples. Ele inclui funcionalidades como visualização de especialidades médicas, escolha de datas e horários disponíveis, e gerenciamento de consultas agendadas.
+O **Agendei** é um aplicativo desenvolvido em React Native que permite aos usuários marcar consultas médicas de forma rápida e simples. Ele inclui funcionalidades como visualização de especialidades médicas, escolha de datas e horários disponíveis, e gerenciamento de consultas agendadas.
 
 ## Funcionalidades
 - **Cadastro e Login:** Permite que os usuários criem uma conta ou façam login.
