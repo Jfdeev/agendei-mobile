@@ -2,6 +2,7 @@ import { FlatList, Text, View } from "react-native";
 import { s } from "./style";
 import { appointments } from "../../constants/data";
 import icon from "../../constants/icon";
+import Appointments from "../../components/appointments/appointments";
 
 
 export default function Calendar() {
@@ -13,8 +14,13 @@ export default function Calendar() {
             data={appointments} 
             keyExtractor={(apoint) => apoint.id_apointment.toString()}
             renderItem={({item}) => {
-                return <Text>{item.service}</Text> 
-                
+                return <Appointments 
+                service={item.service}
+                doctor={item.doctor}
+                specialty={item.specialty}
+                bookingDate={item.bookingDate}
+                bookingTime={item.bookingTime}
+                />
             }}
             />
         </View>
