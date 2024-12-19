@@ -5,11 +5,12 @@ import Home from "./screens/home/home";
 import  Button  from "./components/button";
 import  Calendar  from "./screens/calendar/calendar";
 import Profile  from "./screens/profile/profile";
+import Main from "./screens/main/main";
 
 export default function App() {
     return (
         <View style={{flex: 1}}>
-            <Profile/>
+            <Main />
         </View>
     )
 }
