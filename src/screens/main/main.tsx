@@ -5,6 +5,7 @@ import Profile from '../profile/profile';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import icon from "../../constants/icon";
 import { Image, Text } from "react-native";
+import  { s }  from "./style"
 
 const Tab = createBottomTabNavigator();
 
@@ -20,13 +21,40 @@ export default function Main() {
 
                         }}
                         />
-                    }
+                    },
+                    tabBarIcon: () => {
+                        return <Image source={icon.home} style={s.icon}/>
+                    },
+                    tabBarShowLabel: false,
+                    tabBarActiveBackgroundColor: '#f0f0f0'
                 }}
                 />
 
-                <Tab.Screen name="Calendar" component={Calendar} />
+                <Tab.Screen name="Calendar" component={Calendar} options={{
+                    headerTitleAlign: 'center',
+                    headerTitle: () => {
+                        return <Text style={s.title}>Minhas Reservas</Text>
+                    },
+                    tabBarIcon: () => {
+                        return <Image source={icon.calendar} style={s.icon}/>
+                    },
+                    tabBarShowLabel: false,
+                    tabBarActiveBackgroundColor: '#f0f0f0'
+                }}
+                />
 
-                <Tab.Screen name="Profile" component={Profile} />
+                <Tab.Screen name="Profile" component={Profile} options={{
+                    headerTitleAlign: "center",
+                    headerTitle: () => {
+                        return <Text style={s.title}>Meu Perfil</Text>
+                    },
+                    tabBarIcon: () => {
+                        return <Image source={icon.profile} style={s.icon}/>
+                    }, 
+                    tabBarShowLabel: false,
+                    tabBarActiveBackgroundColor: '#f0f0f0'     
+                }}
+                />
             </Tab.Navigator>
         </NavigationContainer>
     

@@ -109,17 +109,17 @@ export const doctorsServices = [
     },
     {
         id_service: 2,
-        description: 'Examen',
+        description: 'Drenagem',
         price: 200,
     },
     {
         id_service: 3,
-        description: 'Operación',
+        description: 'Lipoaspiração',
         price: 300,
     },
     {
         id_service: 4,
-        description: 'Urgencia',
+        description: 'Mamoplastia',
         price: 400,
     }
 ]
