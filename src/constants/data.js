@@ -105,21 +105,21 @@ export const doctorsServices = [
     {
         id_service: 1,
         description: 'Consulta',
-        price: 100,
+        price: 499.99,
     },
     {
         id_service: 2,
         description: 'Drenagem',
-        price: 200,
+        price: 650,
     },
     {
         id_service: 3,
         description: 'Lipoaspiração',
-        price: 300,
+        price: 5000,
     },
     {
         id_service: 4,
         description: 'Mamoplastia',
-        price: 400,
+        price: 1700,
     }
 ]
