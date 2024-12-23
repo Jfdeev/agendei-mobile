@@ -7,11 +7,12 @@ import  Calendar  from "./screens/calendar/calendar";
 import Profile  from "./screens/profile/profile";
 import Main from "./screens/main/main";
 import Services from "./screens/services/services";
+import Schedule from "./screens/schedule/schedule";
 
 export default function App() {
     return (
         <View style={{flex: 1}}>
-            <Services />
+            <Schedule />
         </View>
     )
 }
