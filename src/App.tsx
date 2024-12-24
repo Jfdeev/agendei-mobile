@@ -12,7 +12,7 @@ import Schedule from "./screens/schedule/schedule";
 export default function App() {
     return (
         <View style={{flex: 1}}>
-            <Schedule />
+            <Main />
         </View>
     )
 }

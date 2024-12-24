@@ -11,7 +11,7 @@ export default function Home() {
             <Text style={s.text}>Agende o seus serviços medicos</Text>
 
             <FlatList 
-            data={doctors} 
+            data={doctors}
             keyExtractor={(doc) => doc.id_doctor}
             showsVerticalScrollIndicator={false}
             renderItem={({item}) => {
