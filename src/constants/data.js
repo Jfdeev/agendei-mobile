@@ -1,44 +1,45 @@
 export const doctors = [
     {
-        id: 1,
+        id_doctor: 1,
         name: 'Dr. John Doe',
         specialty: 'Cardiologist',
-        icon: 'M',
+        icon: 'M'
     },
     {
-        id: 2,
+        id_doctor: 2,
         name: 'Dr. Jane Doe',
         specialty: 'Neurologist',
-        icon: 'F',
+        icon: 'F'
     },
     {
-        id: 3,
+        id_doctor: 3,
         name: 'Dr. James Doe',
         specialty: 'Dentist',
-        icon: 'M',
+        icon: 'M'
     },
     {
-        id: 4,
+        id_doctor: 4,
         name: 'Dr. Jenny Doe',
         specialty: 'Dermatologist',
-        icon: 'F',
+        icon: 'F'
     },
     {
-        id: 5,
+        id_doctor: 5,
         name: 'Dr. Jack Doe',
         specialty: 'Gynecologist',
+        icon: 'M'
     },
     {
-        id: 6,
+        id_doctor: 6,
         name: 'Dr. Jessica Doe',
         specialty: 'Pediatrician',
-        icon: 'F',
+        icon: 'F'
     },
     {
-        id: 7,
+        id_doctor: 7,
         name: 'Dr. Joseph Doe',
         specialty: 'Psychiatrist',
-        icon: 'M',
+        icon: 'M'
     }
 ]
 

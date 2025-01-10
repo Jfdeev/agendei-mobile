@@ -14,5 +14,8 @@ export const s = StyleSheet.create({
         fontSize: FONT_SIZE.lg,
         fontWeight: "bold",
         color: COLORS.gray1,
+    },
+    containerButton: {
+        marginBottom: 20,
     }
 })

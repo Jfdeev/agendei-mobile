@@ -5,7 +5,10 @@ import Service from "../../components/service/service";
 import icon from "../../constants/icon";
 
 
-export default function Services() {
+export default function Services(props) {
+    function ClickService(id_service){
+        props.navigation.navigate("schedule", {id_service: id_service})
+    }
     return (
         <View style={s.container}>
             <View style={s.banner}>
@@ -21,8 +24,10 @@ export default function Services() {
             showsVerticalScrollIndicator={false}
             renderItem={({item}) => {
                 return <Service 
+                    id_service={item.id_service}
                     description={item.description} 
                     price={item.price} 
+                    onPress={ClickService}
                 />
             }}
             />

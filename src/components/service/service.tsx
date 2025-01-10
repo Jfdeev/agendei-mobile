@@ -4,6 +4,8 @@ import  Button from "../button/index";
 
 
 export default function Service(props) {
+
+
     return <View style={s.service}>
         <View style={s.containerText}>
             <Text style={s.description}>{props.description}</Text>
@@ -19,7 +21,7 @@ export default function Service(props) {
         </View>
 
         <View style={s.containerButton}>
-            <Button text="Agendar" />
+            <Button text="Agendar" onPress={() => props.onPress(props.id_service)}/>
         </View>
     </View>
 }

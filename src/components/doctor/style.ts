@@ -18,7 +18,7 @@ export const s = StyleSheet.create({
         color: COLORS.gray1,
         marginTop: 5
     },
-    speciality: {
+    specialty: {
         fontSize: FONT_SIZE.sm,
         color: COLORS.gray2,
     },

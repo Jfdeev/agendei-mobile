@@ -1,4 +1,3 @@
-import { NavigationContainer } from "@react-navigation/native";
 import Home from '../home/home';
 import Calendar from '../calendar/calendar';
 import Profile from '../profile/profile';
@@ -10,8 +9,7 @@ import  { s }  from "./style"
 const Tab = createBottomTabNavigator();
 
 export default function Main() {
-    return <NavigationContainer>
-            <Tab.Navigator id={undefined}>
+    return  <Tab.Navigator id={undefined}>
                 <Tab.Screen name="Home" component={Home} options={{
                     headerTitleAlign: 'center',
                     headerTitle: () => {
@@ -56,6 +54,5 @@ export default function Main() {
                 }}
                 />
             </Tab.Navigator>
-        </NavigationContainer>
     
 }

@@ -44,7 +44,7 @@ export default function Schedule() {
         </View>
 
         
-            <View>
+            <View style={s.containerButton}>
                 <Button text="Confirmar Reserva" />
             </View>
     </View>
