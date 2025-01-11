@@ -1,11 +1,14 @@
 import { Text, View, Image, Alert } from "react-native";
 import Routes from "./routes/routes";
 import { NavigationContainer } from "@react-navigation/native";
+import { AuthProvider } from "./constants/auth";
 
 export default function App() {
     return (
         <NavigationContainer>
-            <Routes />
+            <AuthProvider>
+                <Routes />
+            </AuthProvider>
         </NavigationContainer>
     )
 }

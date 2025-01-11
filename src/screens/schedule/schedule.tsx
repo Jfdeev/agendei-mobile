@@ -11,11 +11,19 @@ LocaleConfig.locales['pt-br'] = ptBR;
 LocaleConfig.defaultLocale = 'pt-br';
 
 
-export default function Schedule() {
+export default function Schedule(props) {
     
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedHour, setSelectedHour] = useState("");
+
+    const id_doctor = props.route.params.id_doctor;
+    const id_service = props.route.params.id_service;
     
+
+    function ClickBooking(){
+        console.log(id_doctor, id_service, selectedDate, selectedHour)
+    }
+
     return <View style={s.container}>
         <View>
             <Calendar onDayPress={(day) => {
@@ -45,7 +53,7 @@ export default function Schedule() {
 
         
             <View style={s.containerButton}>
-                <Button text="Confirmar Reserva" />
+                <Button text="Confirmar Reserva"  onPress={ClickBooking}/>
             </View>
     </View>
 }

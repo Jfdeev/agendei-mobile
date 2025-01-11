@@ -7,8 +7,13 @@ import Doctor from "../../components/doctor/doctor";
 
 export default function Home(props) {
 
-    function ClickDoctor(id_doctor: number, name: string, specialty: string, icon: string) {
-        props.navigation.navigate("services")
+    function ClickDoctor(id_doctor, name, specialty, icon) {
+        props.navigation.navigate("services", {
+            id_doctor, 
+            name, 
+            specialty, 
+            icon
+        })
     }
     return (
         <View style={s.container}>

@@ -6,15 +6,24 @@ import icon from "../../constants/icon";
 
 
 export default function Services(props) {
+
+    const id_doctor = props.route.params.id_doctor;
+    const name = props.route.params.name;
+    const specialty = props.route.params.specialty;
+    const iconDoctor = props.route.params.icon;
+
     function ClickService(id_service){
-        props.navigation.navigate("schedule", {id_service: id_service})
+        props.navigation.navigate("schedule", {
+            id_doctor,
+            id_service
+        })
     }
     return (
         <View style={s.container}>
             <View style={s.banner}>
-                <Image source={icon.female} />
-                <Text style={s.name}>Heber</Text>
-                <Text style={s.specialty}>Cardiologista</Text>
+                <Image source={iconDoctor == "M" ? icon.male : icon.female} />
+                <Text style={s.name}>{name}</Text>
+                <Text style={s.specialty}>{specialty}</Text>
             </View>
 
 
