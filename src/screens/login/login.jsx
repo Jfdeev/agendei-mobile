@@ -1,12 +1,14 @@
 import { Text, View, Image, TextInput, TouchableOpacity, Alert } from "react-native";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { s } from "./style";
 import icon from "../../constants/icon";
 import Button from "../../components/button";
 import api from "../../constants/api";
+import { AuthContext } from "../../constants/auth";
 
 export default function Login(props) {
 
+    const { setUser } = useContext(AuthContext)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -19,7 +21,7 @@ export default function Login(props) {
             });
 
             if(response.data){
-                console.log(response.data)
+                setUser(response.data)
                 props.navigation.navigate("main")
             }
         } catch (error) {
