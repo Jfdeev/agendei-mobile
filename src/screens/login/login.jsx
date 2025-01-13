@@ -4,11 +4,12 @@ import { s } from "./style";
 import icon from "../../constants/icon";
 import Button from "../../components/button";
 import api from "../../constants/api";
-import { AuthContext } from "../../constants/auth";
+import { AuthContext } from "../../constants/auth.js";
+
 
 export default function Login(props) {
 
-    const { setUser } = useContext(AuthContext)
+    const { setUser } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -20,10 +21,10 @@ export default function Login(props) {
                 password
             });
 
-            if(response.data){
+            if(response.data.user.id_user){
                 setUser(response.data)
-                props.navigation.navigate("main")
             }
+
         } catch (error) {
             if(error.response.data.error){
                 Alert.alert("Erro", error.response.data.error)
@@ -45,7 +46,7 @@ export default function Login(props) {
                 <TextInput placeholder="Password" style={s.input} secureTextEntry={true}
                 onChangeText={(text) => setPassword(text)}
                 />
-                <Button text="Acessar" onPress={executeLogin}/>
+                <Button text="Acessar" onPress={executeLogin} />
             </View>
 
             <View style={s.footer}>

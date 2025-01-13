@@ -19,5 +19,7 @@ export default function RoutesOpen() {
             headerShown: false
         }}
         />
+
+        
     </Stack.Navigator>
 }
