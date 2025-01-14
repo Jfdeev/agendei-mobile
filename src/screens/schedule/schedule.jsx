@@ -1,11 +1,11 @@
-import { View, Text } from "react-native";
+import {  Alert ,View, Text } from "react-native";
 import {Calendar, LocaleConfig} from 'react-native-calendars';
 import { ptBR } from "../../constants/calendarNames";
 import { s } from "./style";
 import { useState } from "react";
 import { Picker } from "@react-native-picker/picker";
 import  Button  from "../../components/button";
-
+import api from "../../constants/api";
 
 LocaleConfig.locales['pt-br'] = ptBR;
 LocaleConfig.defaultLocale = 'pt-br';
@@ -20,8 +20,27 @@ export default function Schedule(props) {
     const id_service = props.route.params.id_service;
     
 
-    function ClickBooking(){
-        console.log(id_doctor, id_service, selectedDate, selectedHour)
+
+    async function ClickBooking(){
+        try {
+            const response = await api.post("/appointments", {
+                id_doctor,
+                id_service,
+                booking_date: selectedDate,
+                booking_hour: selectedHour
+            });
+
+            if(response.data?.id_appointment){
+                props.navigation.popToTop();
+            }
+
+        } catch (error) {
+            if(error.response.data.error){
+                Alert.alert("Erro", error.response.data.error)
+            } else {
+                Alert.alert("Erro", "Tente novamente mais tarde")
+            }
+        }
     }
 
     return <View style={s.container}>

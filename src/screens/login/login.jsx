@@ -21,8 +21,9 @@ export default function Login(props) {
                 password
             });
 
-            if(response.data.user.id_user){
-                setUser(response.data)
+            if(response.data){
+                api.defaults.headers.common['Authorization'] = "Bearer " + response.data.user.token;
+                setUser(response.data.user)
             }
 
         } catch (error) {

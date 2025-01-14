@@ -9,11 +9,7 @@ function Routes() {
 
     const { user } = useContext(AuthContext);
 
-    useEffect(() => {
-        console.log("Usuário atualizado:", user); // Depuração
-    }, [user]);
-
-    return user ? <RoutesPrivate /> : <RoutesOpen />;
+    return user && user.id_user ? <RoutesPrivate /> : <RoutesOpen />;
 }
 
 export default Routes;
